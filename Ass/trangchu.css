@@ -1,0 +1,126 @@
+body{margin: 0px; background-image: url(trangchu.jpg); background-size: cover;}
+.top {width: 100%; height: 750px; position: relative;}
+video{
+	box-sizing: border-box;
+	width: 100% ;
+	height: auto;
+	float:left;
+}
+
+.line1{ position: absolute;
+		right: 10px;
+		top: 80px;
+		width: 450px;
+		height: 1px;
+}
+.line2 { position: absolute;
+		left: 10px;
+		top: 80px;
+		width: 450px;
+		height: 1px;
+		transform: rotate(180deg);
+	}
+.line3{ position: absolute;
+		right: 20px;
+		bottom: 40px;	
+		width: 450px;
+		height: 1px;
+}
+.line4 { position: absolute;
+		left: 20px;
+		bottom: 40px;
+		width: 450px;
+		height: 1px;
+		transform: rotate(180deg);
+	}
+.logo{position: absolute;right: 35%;width: 400px; height: auto; top :0px;}
+.riot{
+	z-index: 1;
+	width: 80px;
+	position: absolute;
+	left: 48%;
+	bottom: 10px;
+	
+}
+.arrow { width:40px; opacity : 0.5; animation: arrow 2s infinite;position: relative;
+	left: 665px;
+	bottom: 150px; 
+	z-index: 1;
+	cursor: pointer;
+}
+@keyframes arrow /* Safari and Chrome */ {
+	0%, 100%  { -webkit-transform: translateY(0); }
+    50%  { -webkit-transform: translateY(30px); opacity: 1;}
+}
+#mid { width: 100%; height: 618px; position: relative;}
+#menu{width: 100%; height: 60px;}
+#iconmid{width: 50px; margin-left: 30px;}
+#iconmid2{width: 900px; bottom: 600px; margin-left: 470px; margin-top: -20px;}
+#menu p {position: absolute; left: 70px; top :-20px; color:#CFB457; border-right: 3px solid #E3CD72; font-size: 20px; width: 350px;height: 60px;text-align: center; padding-top: 17px; box-sizing: border-box;}
+#menu{width: 100%; height: 60px; list-style-type: none;border-bottom: 4px solid #E3CD72;background-color:#0D0D0D;position: absolute; top:-30px;}
+#menu ul { width: 60%; margin-left:500px; font-size: 20px; position: absolute; bottom: -30px; cursor:pointer;}
+#menu ul li{ margin-left:40px; display: inline-block; color:#CFB457;} 
+#menu ul li:hover {color: white;}
+#submenu{position: relative; height: 50px;width: 100px; box-sizing: border-box; }
+#content{width: 1349px; height: 60px; position: absolute; background-color: black; top:38px; left: -850px; box-sizing: border-box; padding-top: 5px; display: none; float: left; border-radius: 5px; }
+#content a {margin-left:32px;font-size: 15px;} /* K margin dc ??? -> xài padding trên */
+#submenu:hover #content{
+    display: inline-block;
+	z-index: 1;
+}
+#submenu:hover #content a{color: #E3CD72}
+#submenu #content a:hover {color: white;}
+.demacia img{
+	width: 10px; position: absolute; top:30px ;left:60px;
+}
+.zaun img{
+	width: 17px; position: absolute; top:33px ;left:150px;
+}
+.piltover img {
+	width: 16px; position: absolute; top:34px ;left:240px;
+}
+.shadow_isles img {
+	width: 12px; position: absolute; top:30px ;left:370px;
+}
+.mt_targon img {
+	width: 23px; position: absolute; top:34px ;left:513px;
+}
+.shurima img {
+	width: 21px; position: absolute; top:34px ;left:648px;
+}
+.bilgewater img {
+	width: 10px; position: absolute; top:33px ;left:767px;
+}
+.ionia img {
+	width: 16px; position: absolute; top:35px ;left:870px;
+}
+.freljord img {
+	width: 16px; position: absolute; top:33px ;left:965px;
+}
+.noxus img {
+	width: 19px; position: absolute; top:32px ;left:1060px;
+}
+.void img {
+	width: 17px; position: absolute; top:33px ;left:1143px;
+}
+.bandle_city img {
+	width: 19px; position: absolute; top:32px ;left:1255px;
+}
+#ngoai {width: 1350px; height: 670px; overflow: hidden; margin-top: 30px;} 
+#trong { width: 8100px; height: 670px;margin-top: 30px;}
+#trong img{ width: 1350px; height: 670px; float:left; position: relative; }
+.pre{width: 50px; height: 50px; position: absolute; top: 500px; left: 100px; z-index: 1; cursor:pointer; opacity: 0.7; transition: all 0.5s;}
+.next{width: 50px; height: 50px; position: absolute; top: 500px;left: 1200px; cursor:pointer;opacity: 0.7;transition: all 0.5s;}
+.next:hover {transform: scale(1.2,1.2); opacity: 1;}
+.pre:hover {transform: scale(1.2,1.2); opacity: 1;}
+#roleicon img{
+	width: 50px; height: 50px; position: relative; top:-580px; left: -10px; margin-left: 150px;
+}
+.detail{
+	width: 400px; height: 300px;
+	color: red;
+	 position: absolute;
+}
+#detailroles{width: 1000px; height: 200px; position: relative; z-index: 1; top: -340px; margin-left: 180px; text-align: center; box-sizing: border-box; font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif; opacity: 0.7;}
+.detailroles_name { font-size: 65px; color: white;}
+.detailroles_details {font-size: 20px; color: white; margin-top: -30px;}

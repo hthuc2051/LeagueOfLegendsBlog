@@ -1,0 +1,86 @@
+@charset "utf-8";
+body{background-image: url(Images/backgroundhome.jpeg); color: #DAA520; background-size: cover; margin: 0px;}	
+#menu{width: 100%; height: 60px; margin-top: 31px; margin-left: 0px;}
+#iconmid{width: 50px; margin-left: 30px;}
+#iconmid2{width: 900px; bottom: 600px; margin-left: 470px; margin-top: -20px;}
+#menu p {position: absolute; left: 70px; top :-20px; color:##DAA520; border-right: 3px solid #DAA520; font-size: 20px; width: 350px;height: 60px;text-align: center; padding-top: 17px; box-sizing: border-box;}
+#menu{width: 100%; height: 60px; list-style-type: none;border-bottom: 4px solid #DAA520;background-color:#0D0D0D;position: absolute; top:-30px;}
+#menu ul { width: 60%; margin-left:500px; font-size: 20px; position: absolute; bottom: -30px; cursor:pointer;}
+#menu ul li{ margin-left:40px; display: inline-block; color:##DAA520;} 
+#menu ul li:hover {color: white;}
+#submenu{position: relative; height: 50px;width: 100px; box-sizing: border-box; }
+#content{width: 1349px; height: 60px; position: absolute; background-color: black; top:38px; left: -850px; box-sizing: border-box; padding-top: 5px; display: none; float: left; border-radius: 5px; }
+#content a {margin-left:32px;font-size: 15px;} /* K margin dc ??? -> xài padding trên */
+#submenu:hover #content{
+    display: inline-block;
+	z-index: 1;
+}
+#submenu:hover #content a{color: #DAA520}
+#submenu #content a:hover {color: white;}
+.demacia img{
+	width: 10px; position: absolute; top:30px ;left:60px;
+}
+.zaun img{
+	width: 17px; position: absolute; top:33px ;left:150px;
+}
+.piltover img {
+	width: 16px; position: absolute; top:34px ;left:240px;
+}
+.shadow_isles img {
+	width: 12px; position: absolute; top:30px ;left:370px;
+}
+.mt_targon img {
+	width: 23px; position: absolute; top:34px ;left:513px;
+}
+.shurima img {
+	width: 21px; position: absolute; top:34px ;left:648px;
+}
+.bilgewater img {
+	width: 10px; position: absolute; top:33px ;left:767px;
+}
+.ionia img {
+	width: 16px; position: absolute; top:35px ;left:870px;
+}
+.freljord img {
+	width: 16px; position: absolute; top:33px ;left:965px;
+}
+.noxus img {
+	width: 19px; position: absolute; top:32px ;left:1060px;
+}
+.void img {
+	width: 17px; position: absolute; top:33px ;left:1143px;
+}
+.bandle_city img {
+	width: 19px; position: absolute; top:32px ;left:1255px;
+}
+#subbox1 {
+	float: left;
+	width: 1200px; height: 550px;
+	box-sizing: border-box;
+	position: relative;
+	list-style-type: none;
+	top:-10px;
+	padding: 40px;
+	margin-left: 100px;
+}
+#subbox1 li {
+	width: 300px; height: 300px; border: 2px solid #EEAD0E ;display: inline-block; margin: 20px; margin-top: 5px; transition: all 0.5s;cursor: pointer;
+}
+#subbox1 li:hover{
+	transform: scale(1.05,1.05);
+}
+#content_1{
+	background-size: conver;
+	float: left;
+	width: 100%;
+	height: 800px;
+	position: relative;
+	top: 50px;
+}
+#fix{position: relative; top:10px;}
+.title_img {width: 300px; height: 200px; position: relative;}
+.title {width: 300px; height: 98px; border-top: 2px solid #DAA520; font-size: 25px; text-align: center;background-color: rgba(0,0,0,0.7); padding: 10px; box-sizing: border-box;}
+#news{width: 100%; margin-top: 65px; background-color: rgba(0,0,0,0.8); }
+#news_content{width: 100%; height: 60px;font-size: 40px; border: 1px solid #EEAD0E; padding-top: 5px; box-sizing: border-box; position: relative; top:20px; padding-left: 50px; color: red;}
+#news_details{ width: 100%; height: 1500px; margin-top: 50px; font-size: 20px; padding: 20px; box-sizing: border-box; text-align:justify;}
+#news_content_1{font-size: 30px; box-sizing: border-box; color:#EEAD0E;}

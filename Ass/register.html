@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>REGISTER</title>
+<style>
+	body{background-image: url(background.png); color: #DAA520;}
+	.content {width: 1000px; height: 400px; margin-left: 180px; margin-top: 150px; padding-top: 100px; padding-left: 170px; box-sizing: border-box;background-color: rgba(0,0,0,0.7) ; border:2px solid white;}
+	.content_1 {margin-left:115px; font-size: 20px;}
+	.content_2 {margin-left: 60px;font-size: 20px; margin-top: 20px;}
+	.content_3 {margin-left: 105px; margin-top: 20px; font-size: 20px;}
+	.content_4 {margin-left: 90px; margin-top: 20px; font-size: 20px;}
+	.content_5 {margin-left: 240px; margin-top: 50px; font-size: 20px;}
+	#id {margin-left: 35px; font-size: 20px;}
+	#password{margin-left: 34px; font-size: 20px;}
+	#email{margin-left: 30px; font-size: 20px;}
+	#register{width: 200px; height:50px; font-size: 20px; }
+	.content_3 span {margin-right:34px; }
+	
+#menu{width: 100%; height: 60px; margin-top: 31px; margin-left: -10px;}
+#iconmid{width: 50px; margin-left: 30px;}
+#iconmid2{width: 900px; bottom: 600px; margin-left: 470px; margin-top: -20px;}
+#menu p {position: absolute; left: 70px; top :-20px; color:##DAA520; border-right: 3px solid #DAA520; font-size: 20px; width: 350px;height: 60px;text-align: center; padding-top: 17px; box-sizing: border-box;}
+#menu{width: 100%; height: 60px; list-style-type: none;border-bottom: 4px solid #DAA520;background-color:#0D0D0D;position: absolute; top:-30px;}
+#menu ul { width: 60%; margin-left:500px; font-size: 20px; position: absolute; bottom: -30px; cursor:pointer;}
+#menu ul li{ margin-left:40px; display: inline-block; color:##DAA520;} 
+#menu ul li:hover {color: white;}
+#submenu{position: relative; height: 50px;width: 100px; box-sizing: border-box; }
+#content{width: 1349px; height: 60px; position: absolute; background-color: black; top:38px; left: -850px; box-sizing: border-box; padding-top: 5px; display: none; float: left; border-radius: 5px; }
+#content a {margin-left:32px;font-size: 15px;} /* K margin dc ??? -> xài padding trên */
+#submenu:hover #content{
+    display: inline-block;
+	z-index: 1;
+}
+#submenu:hover #content a{color: #DAA520}
+#submenu #content a:hover {color: white;}
+.demacia img{
+	width: 10px; position: absolute; top:30px ;left:60px;
+}
+.zaun img{
+	width: 17px; position: absolute; top:33px ;left:150px;
+}
+.piltover img {
+	width: 16px; position: absolute; top:34px ;left:240px;
+}
+.shadow_isles img {
+	width: 12px; position: absolute; top:30px ;left:370px;
+}
+.mt_targon img {
+	width: 23px; position: absolute; top:34px ;left:513px;
+}
+.shurima img {
+	width: 21px; position: absolute; top:34px ;left:648px;
+}
+.bilgewater img {
+	width: 10px; position: absolute; top:33px ;left:767px;
+}
+.ionia img {
+	width: 16px; position: absolute; top:35px ;left:870px;
+}
+.freljord img {
+	width: 16px; position: absolute; top:33px ;left:965px;
+}
+.noxus img {
+	width: 19px; position: absolute; top:32px ;left:1060px;
+}
+.void img {
+	width: 17px; position: absolute; top:33px ;left:1143px;
+}
+.bandle_city img {
+	width: 19px; position: absolute; top:32px ;left:1255px;
+}
+	</style>
+	<script>
+		function check(){
+			var check = true;
+			var t = document.getElementById("id");
+			var t1= document.getElementById("email");
+			var t2= document.getElementById("password");
+			var mau = /^.{2,}/;
+			var mau1 =/^\w+[@][a-zA-Z]+([.][a-zA-Z]+){1,2}$/;
+			var mau2 = /^.{6,}/;	
+			if(mau.test(t.value)== false){
+				t.style.backgroundColor ="red";
+				check= false;
+			}
+			else{
+				t.style.backgroundColor ="white";
+			}
+			if(mau1.test(t1.value)==false)// value nhập vào k trùng vs mẫu
+				{
+					t1.style.backgroundColor ="red";
+					check = false;
+				}
+			else 
+				{
+					t1.style.backgroundColor ="white";
+				}
+			if(mau2.test(t2.value)==false)// value nhập vào k trùng vs mẫu
+				{
+					t2.style.backgroundColor ="red";
+					check = false;
+				}
+			else 
+				{
+					t2.style.backgroundColor ="white";
+				}
+			if(check == true){
+				alert("Sign Up successfully");
+			}
+		}
+			
+	
+	</script>
+</head>
+
+<body>
+<div id="menu">
+		<img src="icon.png" id="iconmid"/>
+		<p>LEAGUE OF LEGENDS</p> 
+			<ul>
+				<li onclick="location.href='lol.html'">HOME</li>
+				<li onclick="location.href='Champions/champions.html'">CHAMPIONS</li>
+				<li id="submenu">REGIONS
+						<div id="content">
+						<a class="demacia">DEMACIA
+							<img src="Images/demacia_crest_icon.png"/>
+						</a>
+						<a class="zaun">ZAUN
+							<img src="Images/zaun_crest_icon.png"/>
+						</a>
+						<a class="piltover">PILTOVER
+							<img src="Images/piltover_crest_icon.png"/>
+						</a>
+						<a class="shadow_isles">SHADOW ISLES
+							<img src="Images/shadow_isles_crest_icon.png"/>
+						</a>
+						<a class="mt_targon">MOUNT TARGON
+							<img src="Images/mt_targon_crest_icon.png"/>
+						</a>
+						<a class="shurima">SHURIMA
+							<img src="Images/shurima_crest_icon.png"/>
+						</a>
+						<a class="bilgewater">BILGEWATER
+							<img src="Images/bilgewater_crest_icon.png"/>
+						</a>
+						<a class="ionia">IONIA
+							<img src="Images/iona_crest_icon.png"/>
+						</a>
+						<a class="freljord">FRELJORD
+							<img src="Images/freljord_crest_icon.png"/>
+						</a>
+						<a class="noxus">NOXUS
+							<img src="Images/noxus_crest_icon.png"/>
+						</a>
+						<a class="void">VOID
+							<img src="Images/void_crest_icon.png"/>
+						</a>
+						<a class="bandle_city">BANDLE CITY
+							<img src="Images/bandle_city_crest_icon.png"/>
+						</a>
+						
+					</div>
+				
+				</li>
+				<li onclick="location.href='news.html'">NEWS</li>
+				<li onclick="location.href='register.html'">SIGN UP</li>
+				<li onclick="location.href='login.html'">LOG IN</li>
+			</ul>
+		</div>
+<div class="content">
+<form>
+	<div class="content_1">ID<input type="text" size ="30%" id="id">(*)</div>
+	<div class="content_2">Password<input type="password" placeholder="Password has at least 6 characters" size ="30%" id="password">(*)</div>
+	<div class="content_3"><span>Sex</span>Male <input type = "radio" name ="sex" checked="checked"  > Female <input type = "radio" name ="sex"> (*)</div>
+	<div class="content_4">Email<input type="text" size ="30%" id="email">(*)</div>
+	<div class="content_5"><input type="button" size ="30%" value="Register now" id="register" onClick="check()"></div>
+</form>
+</div>
+</body>
+</html>

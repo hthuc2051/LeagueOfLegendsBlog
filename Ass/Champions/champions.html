@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+body { margin:0px;  background-color:black;}
+#Stage { width:100%; height: 1000px; float:left; position:relative; bottom:1800px;   z-index:1;}
+#background { background-color:black;width:100%; height: 2000px; float:left; background-image:url(backb.jpg);backgournd-size:cover; background-repeat:no-repeat; z-index:0; opacity:1;	 }
+#hinh { width:60%; height:50px; margin:10px 50px 10px 330px; margin-top: 100px;}
+.dad { width: 18%; height: 400px; margin: 50px 5px 0px 6px; float: left; background-size: cover; box-sizing: border-box;}
+.champName { width:100%; height:75px; border-top: 1px solid #FC3; margin-top:268px; transform:translateY(50px); background-color:rgba(0,0,0,0.7);opacity:0;}
+.champName p { text-align:center; margin-top: 15px; color:#CD853F; font-family:"Courier New", Courier, monospace; }
+.Explore { width:100%; height:65px; opacity:1; transform:translateY(50px); opacity:0; background-color:rgba(0,0,0,0.7); }
+.Explore p { text-align:center; margin-top:30px; color:#CD853F; font-size:12px; }
+#footer { width: 100%;height:200px; border-top:1px solid #CD853F; margin-top:2300px;  position:relative; z-index:1; padding-top: 50px;}
+#footer img { display: block; margin-left: auto; margin-right: auto; }
+#footer p { text-align:center; color:#666; margin-left:450px;margin-right:450px;}
+#button {margin-top: 100px;}
+.searchBox { width:60%;height:70px; font-size:16px; color:#CD853F	; box-sizing: border-box; background:#000; border: 0px; padding:10px; float:left; margin-left: 250px; font-family:"Courier New", Courier, monospace;}
+.reloadButton { width:70px; height:70px; box-sizing: border-box; background-image:url(reload.png); float:left;background-size: cover; cursor: pointer;}
+.searchBox::placeholder { color:#CD853F; font-family:"Courier New", Courier, monospace; }
+.Explore{cursor: pointer};	
+	
+#menu{width: 100%; height: 60px; margin-left: 0px; }
+#iconmid{width: 50px; margin-left: 30px;}
+#iconmid2{width: 900px; bottom: 600px; margin-left: 470px; margin-top: -20px;}
+#menu p {position: absolute; left: 70px; top :-20px; color:##DAA520; border-right: 3px solid #DAA520; font-size: 20px; width: 350px;height: 60px;text-align: center; padding-top: 17px; box-sizing: border-box;}
+#menu{width: 100%; height: 60px; list-style-type: none;border-bottom: 4px solid #DAA520;background-color:#0D0D0D;position: absolute;}
+#menu ul { width: 60%; margin-left:500px; font-size: 20px; position: absolute; bottom: -30px; cursor:pointer;}
+#menu ul li{ margin-left:40px; display: inline-block; color:##DAA520;} 
+#menu ul li:hover {color: white;}
+#submenu{position: relative; height: 50px;width: 100px; box-sizing: border-box; }
+#content{width: 1349px; height: 60px; position: absolute; background-color: black; top:38px; left: -850px; box-sizing: border-box; padding-top: 5px; display: none; float: left; border-radius: 5px; }
+#content a {margin-left:32px;font-size: 15px;} /* K margin dc ??? -> xài padding trên */
+#submenu:hover #content{
+    display: inline-block;
+	z-index: 1;
+}
+#submenu:hover #content a{color: #DAA520}
+#submenu #content a:hover {color: white;}
+.demacia img{
+	width: 10px; position: absolute; top:30px ;left:60px;
+}
+.zaun img{
+	width: 17px; position: absolute; top:33px ;left:150px;
+}
+.piltover img {
+	width: 16px; position: absolute; top:34px ;left:240px;
+}
+.shadow_isles img {
+	width: 12px; position: absolute; top:30px ;left:370px;
+}
+.mt_targon img {
+	width: 23px; position: absolute; top:34px ;left:513px;
+}
+.shurima img {
+	width: 21px; position: absolute; top:34px ;left:648px;
+}
+.bilgewater img {
+	width: 10px; position: absolute; top:33px ;left:767px;
+}
+.ionia img {
+	width: 16px; position: absolute; top:35px ;left:870px;
+}
+.freljord img {
+	width: 16px; position: absolute; top:33px ;left:965px;
+}
+.noxus img {
+	width: 19px; position: absolute; top:32px ;left:1060px;
+}
+.void img {
+	width: 17px; position: absolute; top:33px ;left:1143px;
+}
+.bandle_city img {
+	width: 19px; position: absolute; top:32px ;left:1255px;
+}	
+</style>
+</head>
+<script>
+function champ(id,name,region,image,urlc) {
+	this.id = id;
+	this.name = name;
+	this.region = region;
+	this.image = image;
+	this.urlc = urlc;
+	this.frame = "<div class = 'dad' id ='" + id + "' onmouseover='hoverIn(id)' onmouseout='hoverOut(id)' onclick='loadInfo(id)'><div class='champName'><p>" + name + "</br><span style='color:#FFEFD5; font-size:13px;'>" + region + "</span></p></div><div class='Explore'><p>EXPLORE</p></div></div>";
+} 
+var champArray = [];
+champArray[0] = new champ("yasuo","YASUO","IONIA","yasuo1.","file:///D:/WEB/Ass/Ass/champions/YASUO.html");
+champArray[1] = new champ("leesin","LEE SIN","IONIA","leesin1.","file:///D:/WEB/Ass/Ass/champions/LEE%20SIN.html");
+champArray[2] = new champ("zed","ZED","IONIA","zed1","file:///D:/WEB/Ass/Ass/champions/ZED.html");
+champArray[3] = new champ("xinzhao","XIN ZHAO","DEMACIA","xinzhao1","file:///D:/WEB/Ass/Ass/champions/XIN%20ZHAO.html");
+champArray[4] = new champ("udyr","UDYR","FRELJORD","udyr1","file:///D:/WEB/Ass/Ass/champions/UDYR.html");
+champArray[5] = new champ("masteryi","MASTER YI","IONIA","masteryi1","file:///D:/WEB/Ass/Ass/champions/master%20yi.html");
+champArray[6] = new champ("kayn","KAYN","IONIA","kayn1","file:///D:/WEB/Ass/Ass/champions/KAYN.html");
+champArray[7] = new champ("galio","GALIO","DEMACIA","galio1","file:///D:/WEB/Ass/Ass/champions/galio.html");
+champArray[8] = new champ("diana","DIANA","MOUNT TARGON","diana1","file:///D:/WEB/Ass/Ass/champions/DIANAA.html");
+champArray[9] = new champ("Sona","SONA","DEMACIA","Sona1","file:///D:/WEB/Ass/Ass/champions/SONA.html");
+champArray[10] = new champ("ahri","Ahri","IONIA","ahri1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[11] = new champ("janna","JANNA","ZAUN","janna1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[12] = new champ("mf","MISS FORTUNE","BILGEWATER","MissFortune1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[13] = new champ("syndra","SYNDRA","IONIA","syndra1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[14] = new champ("soraka","SORAKA","IONIA","soraka1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[15] = new champ("ezreal","EZREAL","PILTOVER","ezreal1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[16] = new champ("lux","LUX","DEMACIA","lux1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[17] = new champ("jinx","JINX","ZAUN","jinx1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[18] = new champ("lulu","LULU","BANDLE CITY","lulu1","hfile:///D:/WEB/Ass/starGuardian.html");
+champArray[19] = new champ("poppy","POPPY","DEMACIA","poppy1","file:///D:/WEB/Ass/starGuardian.html");
+champArray[20] = new champ("ekko","EKKO","ZAUN","Ekko1","file:///D:/WEB/Ass/Ass/champions/DIANAA.html");
+champArray[21] = new champ("jayce","JAYCE","PILTOVER","Jayce1","file:///D:/WEB/Ass/Champions/champions.html");
+champArray[22] = new champ("gang","GANGPLANK","BILGEWATER","Gangplank1","file:///D:/WEB/Ass/Champions/champions.html");
+champArray[23] = new champ("kled","KLED","NOXUS","kled1","file:///D:/WEB/Ass/Champions/champions.html");
+champArray[24] = new champ("graves","GRAVES","BILGEWATER","graves1","file:///D:/WEB/Ass/Champions/champions.html");
+
+function hoverIn(id) {
+	var div1 = document.getElementById(id);
+	div1.style.transform ="scale(1.0999,1.1)";
+	div1.style.transition ="all 0.5s";
+	div1.style.border ="1px solid #FC6";
+	
+	var div2 = document.getElementById(id).firstChild;
+	div2.style.transform = "translateY(-12px)";
+	div2.style.transition ="all 0.1s";
+	div2.style.opacity="1";
+	
+	var div3 = document.getElementById(id).lastChild;
+	div3.style.transform = "translateY(-13px)";
+	div3.style.transition ="all 0.1s";
+	div3.style.opacity="1";
+	div3.style.borderTop="1px solid #FC6";
+}
+
+function hoverOut(id) {
+	var div1 = document.getElementById(id);
+	div1.style.transform ="scale(1.0,1.0)";
+	div1.style.transition ="all 0.5s";
+	div1.style.border ="none";
+	
+	var div2 = document.getElementById(id).firstChild;
+	div2.style.transform = "translateY(10px)"; 	
+	div2.style.transition ="all 0.1s";
+	div2.style.opacity="0";
+	
+	var div3 = document.getElementById(id).lastChild;
+	div3.style.transform = "translateY(10px)"; 
+	div3.style.transition ="all 0.1s";	
+	div3.style.opacity="0";
+}
+
+function loadChamp() {
+	for(var i = 0; i < champArray.length; i++) {
+		var frame = champArray[i].frame;
+		var divBody = document.getElementById("khung");
+		divBody.innerHTML = divBody.innerHTML + frame;
+		
+		var image = champArray[i].image;
+		var id = champArray[i].id;
+		var divFrame = document.getElementById(id);
+		divFrame.style.backgroundImage = "url('" + image +".jpg')";
+		
+	}
+}
+
+function findChamp() {
+	var champ = document.forms["frm"].find.value.toUpperCase();
+	for(var i = 0; i < champArray.length; i++) {
+		if(champ == champArray[i].name) {
+			var frame1 = champArray[i].frame;
+			var div1 = document.getElementById("khung");
+			div1.innerHTML =  frame1;
+			
+			
+			
+			var image2 = champArray[i].image;
+			var id2 = champArray[i].id;
+			var div2 = document.getElementById(id2);
+			div2.style.backgroundImage = "url('" + image2 +".jpg')";
+			return;
+		}
+		else { 
+			
+		}
+}
+}
+
+function loadInfo(id1) {
+	var index;
+	for(var i = 0; i < champArray.length; i++) {
+		if(champArray[i].id == id1) {
+			index = i;
+			var url = champArray[i].urlc
+		}
+	}
+	window.open(url,"_self");
+}
+
+function reloadPage() {
+	window.location.reload();
+}
+
+</script>
+<body onload="loadChamp()">
+<div id="menu" style="color: #DAA520;">
+		<img src="../icon.png" id="iconmid"/>
+		<p>LEAGUE OF LEGENDS</p> 
+			<ul>
+				<li onclick="location.href='../lol.html'">HOME</li>
+				<li onclick="location.href='champions.html'">CHAMPIONS</li>
+				<li id="submenu">REGIONS
+						<div id="content">
+						<a class="demacia">DEMACIA
+							<img src="../Images/demacia_crest_icon.png"/>
+						</a>
+						<a class="zaun">ZAUN
+							<img src="../Images/zaun_crest_icon.png"/>
+						</a>
+						<a class="piltover">PILTOVER
+							<img src="../Images/piltover_crest_icon.png"/>
+						</a>
+						<a class="shadow_isles">SHADOW ISLES
+							<img src="../Images/shadow_isles_crest_icon.png"/>
+						</a>
+						<a class="mt_targon">MOUNT TARGON
+							<img src="../Images/mt_targon_crest_icon.png"/>
+						</a>
+						<a class="shurima">SHURIMA
+							<img src="../Images/shurima_crest_icon.png"/>
+						</a>
+						<a class="bilgewater">BILGEWATER
+							<img src="../Images/bilgewater_crest_icon.png"/>
+						</a>
+						<a class="ionia">IONIA
+							<img src="../Images/iona_crest_icon.png"/>
+						</a>
+						<a class="freljord">FRELJORD
+							<img src="../Images/freljord_crest_icon.png"/>
+						</a>
+						<a class="noxus">NOXUS
+							<img src="../Images/noxus_crest_icon.png"/>
+						</a>
+						<a class="void">VOID
+							<img src="../Images/void_crest_icon.png"/>
+						</a>
+						<a class="bandle_city">BANDLE CITY
+							<img src="../Images/bandle_city_crest_icon.png"/>
+						</a>
+						
+					</div>
+				
+				</li>
+				<li onclick="location.href='../news.html'">NEWS</li>
+				<li onclick="location.href='../register.html'">SIGN UP</li>
+				<li onclick="location.href='../login.html'">LOG IN</li>
+			</ul>
+		</div>
+<div id="background">
+<div id="button">
+	<form name="frm" method="get">
+    	<input type="text" class="searchBox" name="find" onkeyup="findChamp()" placeholder="FIND A CHAMPION" />
+		<input type="button" class="reloadButton" onclick="reloadPage()" />    </form>
+	</div>
+</div>
+<div id="Stage">
+    <div id="hinh">
+    	<table>
+        	<td id="left">
+            <img src="left.png" style="margin-right: 20px;" />
+            </td>
+            <td id="mid">
+            <img src="icon.png" style="width:30px;height:auto; margin:0px 25px 0px 25px;" />
+            </td>
+            <td id="right">
+            <img src="line.png" style="margin-left: 20px;"/>
+            </td>
+        </table>
+    </div>
+    <div id="khung" style="margin-top:20px; margin-left:7%;">
+    </div>
+    <div id="footer">
+    <img src="riotLogo.png" style="width:auto;height:40px;transform:TranslateY(10px);"/>
+    <p style="font-size:12px;transform:translateY(60px);"> &copy 2017 Riot Games, Inc. All rights reserved. Riot Games, League of Legends and PvP.net are trademarks, services marks, or registered trademarks of Riot Games, Inc.</p>
+    <img src="esrb.jpg" style="width:auto;height:90px; transform:TranslateY(80px);"/>
+    </div>
+</div>
+
+</body>
+</html>

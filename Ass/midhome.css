@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+#box{
+	background-image:url(background.png);
+	background-size: conver;
+	float: left;
+	width: 100%;
+	height: 550px;
+	position: relative;
+	top: 50px;
+	border-top: 5px solid #EEAD0E;
+	border-bottom: 5px solid #EEAD0E;
+	
+}
+#subbox1 {
+	float: left;
+	width: 750px; height: 550px;
+	box-sizing: border-box;
+	position: relative;
+	list-style-type: none;
+	top:-10px;
+	padding: 25px;
+}
+#subbox1 li {
+	width: 300px; height: 220px; border: 0.5px solid #EEAD0E ;display: inline-block; margin: 20px; margin-top: 5px; transition: all 0.5s;cursor: pointer;
+}
+#subbox2 {
+	float: left;
+	border: 1px solid #EEAD0E;
+	width:500px; height: 470px;
+	box-sizing: border-box;
+	position: relative;
+	list-style-type: none;
+	margin-left: 50px;
+	margin-top: 35px;
+	transition: all 0.5s;
+	overflow: hidden;
+}
+#hoversubbox2 { width: 550px; height: 550px; position: absolute; z-index: 1; left: 720px; transition: all 1s;}
+#subbox2 video {width: auto; height: 470px; margin-left: -200px;}
+.subbox2_detail {width: 499px; height: 50px; color: red;position: relative; left: 50px; top: 475px; background-color: rgba(0, 0, 0, 0.7); border: 1px solid #EEAD0E; visibility: hidden; transition: all 0.5s; cursor: pointer;}
+.subbox2_detail p { font-size: 20px; margin-top: 15px; color:#EEAD0E; margin-left: 200px; position: absolute; font-family:Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial," sans-serif"; }
+.subbox2_detail img {position: absolute; left: 290px; margin-top: 15px;animation: arrowdetail 2s infinite}
+@keyframes arrowdetail /* Safari and Chrome */ {
+	0%, 100%  { -webkit-transform: translateX(0); }
+    50%  { -webkit-transform: translateX(20px); opacity: 1;}
+}
+#subbox1 li:hover{
+	transform: scale(1.2,1.2);
+}
+#hoversubbox2:hover #subbox2{
+	transform: scale(1.1,1.1);
+}
+
+#hoversubbox2:hover .subbox2_detail{
+	visibility: visible;
+	margin-top: -10px;
+}
+.starguadian {background-image: url(Images/starguadian.jpg); background-size: cover; background-position: 40%;}
+.leesin {background-image: url(Images/leesin.jpg); background-size: cover;}
+#movie {width: 50%; height: auto;}
+#movie video { border: 3px solid #DAA520; margin-top: 100px; margin-left: 10px;}
+#footer { width: 100%;height:300px; border-top:1px solid #CD853F;margin-top:610px; position:relative; z-index:1; padding-top: 20px; background-color: rgba(0,0,0,0.7);}
+#footer img { display: block; margin-left: auto; margin-right: auto; }
+#footer p { text-align:center; color:#666; margin-left:450px;margin-right:450px;}

@@ -1,0 +1,222 @@
+@charset "utf-8";
+body{margin: 0px; background-image: url(imagesStarGua/sgLandingBackground.jpg);background-position: 85%; background-size: cover; box-sizing: border-box;}
+#top {width: 100%; height: 550px; background-image: url(imagesStarGua/sgHeaderBackground.png); background-size: cover; float: left; position: relative; top: -20px;}
+.home{position: absolute; top: -100px; left:  900px; width: 100px !important; height: 30px;border: 2px double #F103D2; padding-top: 5px; color: white!important; cursor: pointer; transition: all 0.3s;}
+.home:hover{background-color: rgba(0,0,0,0.3); transform: scale(1.1,1.1);}
+.logo{margin-left: 550px; margin-top: 70px; width: 205px; height: auto; transition: all 1s; animation: logo1 3s infinite; }
+@keyframes logo1{
+	0%, 100%  { opacity: 0.8;transform:  scale(1.0,1.0);}
+    50%  {opacity: 1;transform: scale(1.05,1.05);}
+}
+#top span{ width: 60%; font-size: 80px; color: white; float: left; margin-left: 280px;font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif; margin-top: 20px; letter-spacing: 10px;}
+#top p { width: 750px; color:darkgray; font-size: 20px; text-align: center; margin-left: 280px; margin-top: 150px;}
+.image{width: 100%; height: 400px; margin-top: 50px; float: left;}
+#mid{width: 100%; height: 3500px; float: left;position: relative;margin-top: 300px;}
+.choice {display: inline-block; position: absolute; left: 256px; margin-top: 20px;}
+.choice img { margin-left: 110px; transition: all 1s;}
+	@-webkit-keyframes rotate {
+		0%{ transform: rotate(0deg);}
+		100%{transform: rotate(360deg);}	
+	}
+.pre {	opacity: 0.7; position: absolute;left: 270px;top: 100px;cursor:pointer; animation: prea 2s infinite;}
+@keyframes prea /* Safari and Chrome */ {
+	0%, 100%  { -webkit-transform: translateX(0); opacity: 0.7;}
+    50%  { -webkit-transform: translateX(-5px); opacity: 1;}
+}
+.next{opacity: 0.7; position: absolute;left:1000px;top: 100px; animation: preb 2s infinite;}
+
+@keyframes preb /* Safari and Chrome */ {
+	0%, 100%  { -webkit-transform: translateX(0); }
+    50%  { -webkit-transform: translateX(5px); opacity: 1;}
+}
+.dadilionmain {height:200px; width: auto; position: relative; animation:dandelionMain 5s infinite ease-in-out; transform-origin: left bottom; margin-left: -10px;}
+.line{width: 150px; height: 30px; background-color: white; margin-top: -10px;}
+@keyframes dandelionMain /* Safari and Chrome */ {
+	 0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+#dandileon1{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 17s;
+    animation-delay: 1s; 
+	animation-iteration-count: infinite;
+}
+#dandileon2{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 17s;
+    animation-delay: 1s; 
+	animation-iteration-count: infinite;
+}
+#dandileon3{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 17s;
+    animation-delay: 1s; 
+	animation-iteration-count: infinite;
+}
+#dandileon4{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 18s;
+    animation-delay: 7s; 
+	animation-iteration-count: infinite;
+}
+#dandileon5{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 18s;
+    animation-delay: 7s; 
+	animation-iteration-count: infinite;
+}
+#dandileon6{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 18s;
+    animation-delay: 7s; 
+	animation-iteration-count: infinite;
+}
+#dandileon7{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 19s;
+    animation-delay: 10s; 
+	animation-iteration-count: infinite;
+}
+#dandileon8{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 19s;
+    animation-delay: 10s; 
+	animation-iteration-count: infinite;
+}
+#dandileon9{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 19s;
+    animation-delay: 10s; 
+	animation-iteration-count: infinite;
+}
+#dandileon10{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 20s;
+    animation-delay: 15s; 
+	animation-iteration-count: infinite;
+}
+#dandileon11{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 20s;
+    animation-delay: 15s; 
+	animation-iteration-count: infinite;
+}
+#dandileon12{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 20s;
+    animation-delay: 15s; 
+	animation-iteration-count: infinite;
+}
+#dandileon13{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 21s;
+    animation-delay: 16s; 
+	animation-iteration-count: infinite;
+}
+#dandileon14{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 21s;
+    animation-delay: 20s; 
+	animation-iteration-count: infinite;
+}
+#dandileon15{ 
+	position: absolute;
+    animation-name: flying2;
+    animation-duration: 20s;
+    animation-delay: 8s; 
+	animation-iteration-count: infinite;
+}
+#dandileon16{ 
+	position: absolute;
+    animation-name: flying;
+    animation-duration: 20s;
+    animation-delay: 20s; 
+	animation-iteration-count: infinite;
+}
+@keyframes flying {
+    0% {
+        top: 90%;
+        left: 0%;
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        top: 20%;
+        left: 110%;
+        transform: rotate(-45deg);
+    }
+}
+@keyframes flying2 {
+    0% {
+        top: 90%;
+        left: 0%;
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        top: 0%;
+        left: 110%;
+        transform: rotate(-20deg);
+    }
+}
+.small_dandileon {width: 100px; height: auto; position: absolute; margin-top: 0px; margin-left: -100px;}
+#ngoai{width: 700px; height: 140px;margin-left: 300px; margin-top: 50px; overflow: hidden;cursor:pointer;}
+#trong {width: 1400px;height: 140px;}
+#trong div{border: 1px double #FF1493 ; border-radius: 50%; width: 103px;height: 103px; float: left;margin-left: 30px; margin-top: 15px; transition: all 0.3s;}
+#trong div:hover{transform: scale(1.3,1.3); border: 1px solid #9D00C8; }
+#wallpaper{width: 80%; height: 500px; border: 1px solid #FF6666; margin-top: 100px;margin-left: 140px;box-sizing: border-box; background-image: url(imagesStarGua/ahri.jpg); background-size: cover; transition: all 2s;}
+.name{width: 900px; height: 100px; margin-top: 0px; margin-left: 50px; padding-top: 20px; font-size: 70px; color: white;box-sizing: border-box;font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;}
+#detail1{width: 60%; height:200px; border: 3px solid #FF6666;  margin-left: 270px; z-index: 1; margin-top: -50px; background-color: rgba(0, 0, 0, 0.6); }
+.detail1_1 {  list-style-type: none; width: 900px; height: 50px; box-sizing: border-box; margin-left: 50px; margin-top: -60px; }
+.detail1_1 li { width: 150px; height: 30px;display: inline-block; font-size: 15px; text-align: center; color:#FF6666;padding-top: 10px; z-index: 1; border-right: 1px dashed #BBBBBB ;border-left: 1px dashed #BBBBBB ; padding-right: 5px;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif"; }
+.detail1_2 {  list-style-type: none; width: 900px; height: 50px; box-sizing: border-box; margin-left: 50px; margin-top: -20px; }
+.detail1_2 li { width: 150px; height: 30px;display: inline-block; font-size: 20px; text-align: center; color:#FF6666;padding-top: 0px; z-index: 1; padding-right: 5px;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif"; border: 1px dashed #BBBBBB;}
+#detail2 { width: 700px; height: 300px; margin-left: 150px; margin-top: 120px; float: left;}
+.detail2_1{width: 100%; height: 30px; color: #FF6666; font-size: 20px;font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;}
+.detail2_2{font-size: 22px; font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif; color: white; }
+.detail2_3{width: 350px; height: 400px; float: left; margin-top: 100px; margin-left: 70px; border: 2px solid #FF6666;}
+#detail3 {width: 1000px; height: 2600px;float: left; margin-left: 200px; margin-top: -450px;}
+.guideimg_1 {width: 120px; height: auto; position: relative; top: 120px; margin-left: 317px; animation: logo2 2.5s infinite;}
+@keyframes logo2 /* Safari and Chrome */ {
+	0%, 100%  { opacity: 1; transform: scale(1.2,1.2);}
+    50%  {opacity: 0.5;transform: scale(1.0,1.0);}
+}
+.guideimg_2{width: 100%; height: auto;  position: relative; top: -500px; }
+#detail3_1{width: 1200px; height: 500px; border: 1px solid #DAA520; margin-top: 0px; background-size: cover; margin-left: -120px;}
+.detail3_1_video {width: 1200px; height: 500px; overflow: hidden; position: absolute;}
+.detail3_1_video video {width: 1300px; height: auto; margin-top: -10px;	}
+.guidename{width: 800px; height: 80px; margin-left: 57px; font-size: 70px; box-sizing: border-box; margin-top: -10px;color: white; position: relative; top: 50px;}
+.spell li {display: inline-block; width: 60px; height: 60px; border: 3px solid black; margin-left: 20px; background-size: cover; margin-top: -10px; position: relative;}
+.rune li { width: 120px; height: 170px;display: inline-block; margin-left: 20px; background-color: rgba(0, 0, 0, 0.7); background-size: cover; margin-top: 80px; border: 1px solid black; opacity: 0.9;}
+#detail3_2{width: 100%; height:1800px; border: 1px double #DAA520; background-color: rgba(0, 0, 0, 0.7);}
+.topic {position: relative; top:5px;left: 20px; font-size: 20px; font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif; color: #DAA520;}
+#detail3_2 li {display:inline-block; width: 60px; height: 60px; border: 2px solid black;margin-left: 50px; margin-top: 10px; margin-bottom: 20px;background-size: cover;}
+.upSkill{ width: 100%; height: 250px; border-bottom: 1px solid #DAA520;border-top: 1px solid #DAA520; margin-left: -20px; background-image: url(imagesStarGua/ahri3.png); background-size: cover; margin-top: 20px;}
+.upMasteries{width: 100%; height: 520px; border-bottom: 1px solid #DAA520;border-top: 1px solid #DAA520; margin-left: -20px; margin-top: 40px; background-image: url(imagesStarGua/ahri4.png); background-size:cover; }
+.topic span { position: relative; top:20px;}
+#detail3_2 ul { border-bottom: 1px solid #DAA520;}
